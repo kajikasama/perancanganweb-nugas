@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Universitas Gensokyo :: Registrasi Mahasiswa Baru</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+      }
+      nav {
+        width: 100%;
+        height: 40px;
+        background: rgb(147, 182, 248);
+        border-bottom: rgb(147, 182, 248) 4px solid;
+      }
+      nav ul {
+        margin: 0px 20vw;
+      }
+      nav ul li {
+        list-style: none;
+        float: left;
+      }
+      nav ul li a {
+        text-decoration: none;
+        display: block;
+        padding: 10px 10px;
+        font-size: 16px;
+        color: #fff;
+        transition: 0.7s all;
+      }
+      nav ul li a:hover {
+        background: lightblue;
+        transition: 0.5s all;
+      }
+      .hero {
+        width: 100%;
+        min-height: 160px;
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+          url("bg.png");
+        background-size: cover;
+        background-position-y: center;
+
+        color: #fff;
+        padding: 150px 0px;
+      }
+      .hero h2 {
+        font-size: 32px;
+      }
+      .hero span {
+        font-weight: bold;
+      }
+      .hero h2,
+      .hero p,
+      .hero a {
+        text-align: center;
+      }
+
+      .hero a {
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        margin: auto;
+        width: 180px;
+        line-height: 50px;
+        background: rgb(136, 179, 245);
+        margin-top: 30px;
+        transition: 0.5s all;
+        font-weight: 600;
+      }
+      .hero a:hover {
+        color: rgb(104, 163, 253);
+        background: #fff;
+        transition: 0.5s all;
+      }
+      .middle {
+        padding-bottom: 40px;
+        padding-top: 40px;
+      }
+      footer {
+        background: rgb(147, 182, 248);
+        padding: 20px;
+        color: #fff;
+      }
+      .middle h2 {
+        color: rgb(111, 158, 245);
+      }
+      table tr td {
+        color: rgb(75, 75, 75);
+        padding: 10px;
+      }
+      table tr span {
+        color: red;
+      }
+      table tr td input[type="text"],
+      table tr td input[type="email"],
+      table tr td input[type="tel"] {
+        min-width: 280px;
+        width: 27.4vw;
+        /* line-height: 30px; */
+        outline: none;
+        border: none;
+        background: rgb(201, 223, 255);
+        font-size: 15px;
+        padding: 8px 20px;
+      }
+      table tr td input[type="text"]::placeholder,
+      table tr td input[type="email"]::placeholder,
+      table tr td input[type="tel"]::placeholder {
+      }
+
+      table tr td select {
+        min-width: 280px;
+        width: 30vw;
+        padding: 8px 20px;
+        outline: none;
+        border: none;
+        background: rgb(201, 223, 255);
+        /* border-radius: 8px; */
+      }
+      table tr td input[type="date"] {
+        min-width: 280px;
+        width: 27.4vw;
+        padding: 8px 20px;
+        outline: none;
+        border: none;
+        /* border-radius: 8px; */
+        background: rgb(201, 223, 255);
+      }
+      table tr td input[type="submit"],
+      table tr td input[type="reset"] {
+        padding: 8px 20px;
+        line-height: 30px;
+        border: none;
+        background: none;
+        transition: 0.5s all;
+      }
+      table tr td input[type="submit"] {
+        background: rgb(95, 148, 245);
+        color: #fff;
+        opacity: 0.7;
+      }
+      table tr td input[type="reset"] {
+        background: rgb(243, 91, 91);
+        color: #fff;
+        opacity: 0.7;
+      }
+      table tr td input[type="submit"]:hover,
+      table tr td input[type="reset"]:hover {
+        opacity: 1;
+        transition: 0.5s all;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="#middle">Daftar Mahasiswa Baru</a></li>
+      </ul>
+    </nav>
+    <section class="hero">
+      <h2>Daftar Baru Mahasiswa Universitas Gensokyo</h2>
+      <p>Wujudkan <span>Mimpi</span> Kita <span>Bersama</span></p>
+      <a href="#middle">Daftar Sekarang</a>
+    </section>
+    <section class="middle" id="middle">
+      <center>
+        <h2>Register Mahasiswa Baru</h2>
+        <form action="">
+          <table>
+            <tr>
+              <td>Nama Lengkap <span>*</span></td>
+              <td>
+                <input
+                  type="text"
+                  name="NamaLengkap"
+                  required
+                  placeholder="Tulis Nama Lengkap Anda .."
+                  autocomplete="off"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Alamat Sekarang <span>*</span></td>
+              <td>
+                <input
+                  type="text"
+                  name="Alamat"
+                  required
+                  placeholder="Tulis Alamat Tempat Tinggal Sekarang .."
+                  autocomplete="off"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>No Telp <span>*</span></td>
+              <td>
+                <input
+                  type="tel"
+                  required
+                  placeholder="Tulis Nomor HP / Smartphone / Telepon Lainnya .."
+                  autocomplete="off"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Email <span>*</span></td>
+              <td>
+                <input
+                  type="email"
+                  placeholder="Masukan Email Valid Anda .."
+                  autocomplete="off"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Jenis Kelamin <span>*</span></td>
+              <td class="jenskel">
+                <input type="radio" name="jenskel" id="laki-laki" checked />
+                <label for="laki-laki">laki-laki</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="jenskel" id="perempuan" />
+                <label for="perempuan">perempuan</label>
+              </td>
+            </tr>
+            <tr>
+              <td>Agama <span>*</span></td>
+              <td>
+                <select>
+                  <option value="">- Pilih Agama Kepercayaan -</option>
+                  <option value="Hindu">Hindu</option>
+                  <option value="Islam">Islam</option>
+                  <option value="Kristen">Kristen</option>
+                  <option value="Katolik">Katolik</option>
+                  <option value="Buddha">Buddha</option>
+                  <option value="Khongucu">Khongucu</option>
+                  <option value="Shinto">Shinto</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Tempat Lahir <span>*</span></td>
+              <td>
+                <input
+                  type="text"
+                  placeholder="Masukan Tempat Lahir Anda .."
+                  autocomplete="off"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Tanggal Lahir <span>*</span></td>
+              <td><input type="date" name="" id="" value="" /></td>
+            </tr>
+            <tr>
+              <td>Program Studi</td>
+              <td>
+                <select>
+                  <option value="">- Pilih Program Studi -</option>
+                  <option value="Sistem Informasi">Sistem Informasi</option>
+                  <option value="Sistem Komputer">Sistem Komputer</option>
+                  <option value="Tehnik Informasi">Tehnik Informasi</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Jam Kuliah <span>*</span></td>
+              <td>
+                <select>
+                  <option value="">- Pilih Jam Kuliah -</option>
+                  <option value="Pagi">Pagi</option>
+                  <option value="Malam">Malam</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                <input type="submit" value="Daftar" />
+                <input type="reset" value="Hapus" />
+              </td>
+            </tr>
+          </table>
+        </form>
+      </center>
+    </section>
+    <footer>
+      <p align="center">CopyRight &copy; 2021 Made with ❤ By Agus Chandra</p>
+    </footer>
+  </body>
+</html>
