@@ -44,7 +44,7 @@
         width: 100%;
         min-height: 160px;
         background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
-          url("bg.png");
+          url("https://raw.githubusercontent.com/kajikasama/perancanganweb-nugas/main/bg.png");
         background-size: cover;
         background-position-y: center;
 
@@ -111,10 +111,6 @@
         font-size: 15px;
         padding: 8px 20px;
       }
-      table tr td input[type="text"]::placeholder,
-      table tr td input[type="email"]::placeholder,
-      table tr td input[type="tel"]::placeholder {
-      }
 
       table tr td select {
         min-width: 280px;
@@ -136,7 +132,7 @@
       }
       table tr td input[type="submit"],
       table tr td input[type="reset"] {
-        padding: 8px 20px;
+        padding: 8px 35px;
         line-height: 30px;
         border: none;
         background: none;
@@ -218,6 +214,7 @@
                   type="email"
                   placeholder="Masukan Email Valid Anda .."
                   autocomplete="off"
+                  required
                 />
               </td>
             </tr>
@@ -234,7 +231,7 @@
             <tr>
               <td>Agama <span>*</span></td>
               <td>
-                <select>
+                <select required>
                   <option value="">- Pilih Agama Kepercayaan -</option>
                   <option value="Hindu">Hindu</option>
                   <option value="Islam">Islam</option>
@@ -253,17 +250,18 @@
                   type="text"
                   placeholder="Masukan Tempat Lahir Anda .."
                   autocomplete="off"
+                  required
                 />
               </td>
             </tr>
             <tr>
               <td>Tanggal Lahir <span>*</span></td>
-              <td><input type="date" name="" id="" value="" /></td>
+              <td><input required type="date" name="TanggalLahir" id="" value="" /></td>
             </tr>
             <tr>
-              <td>Program Studi</td>
+              <td>Program Studi <span>*</span></td>
               <td>
-                <select>
+                <select name="ProgramStudi" required>
                   <option value="">- Pilih Program Studi -</option>
                   <option value="Sistem Informasi">Sistem Informasi</option>
                   <option value="Sistem Komputer">Sistem Komputer</option>
@@ -272,9 +270,19 @@
               </td>
             </tr>
             <tr>
-              <td>Jam Kuliah <span>*</span></td>
+              <td>Pilih Kelas <span>*</span></td>
               <td>
-                <select>
+                <select name="PilihKelas" required>
+                  <option value="">- Pilih Kelas -</option>
+                  <option value="Hindu">Reguler</option>
+                  <option value="Islam">Karyawan</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Pilih Jam Kuliah <span>*</span></td>
+              <td>
+                <select name="JamKuliah" required>
                   <option value="">- Pilih Jam Kuliah -</option>
                   <option value="Pagi">Pagi</option>
                   <option value="Malam">Malam</option>
